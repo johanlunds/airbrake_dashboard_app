@@ -1,4 +1,9 @@
 class DashboardController < ApplicationController
+  http_basic_authenticate_with(
+    name:     Rails.configuration.http_auth_username,
+    password: Rails.configuration.http_auth_password
+  )
+
   def show
     @errors = ErrorDecorator.decorate_collection(airbrake_client.errors)
   end
