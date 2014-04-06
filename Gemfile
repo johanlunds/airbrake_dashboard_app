@@ -50,5 +50,6 @@ gem 'slim-rails'
 gem 'airbrake-api'
 gem 'awesome_print'
 gem 'draper'
-gem 'heroku', require: false
+gem 'foreman', group: :development, require: false
+gem 'thin', require: false
 gem 'rails_12factor', group: :production # needed by Heroku in Rails 4 to enable features such as static asset serving and logging
