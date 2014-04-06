@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.0.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -48,3 +50,5 @@ gem 'slim-rails'
 gem 'airbrake-api'
 gem 'awesome_print'
 gem 'draper'
+gem 'heroku', require: false
+gem 'rails_12factor', group: :production # needed by Heroku in Rails 4 to enable features such as static asset serving and logging
