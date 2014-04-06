@@ -1,13 +1,13 @@
+@import "variables_and_utils";
+
 body {
-  padding: 1em;
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
+  padding: 30px;
   margin: 0;
-  margin-bottom: 1em;
-
   font-size: 60px;
-
   font-family: 'Shojumaru', cursive;
   // font-family: 'Eater', cursive;
   // font-family: 'Caesar Dressing', cursive;
@@ -39,6 +39,107 @@ h1 {
 
 }
 
-body {
-  font-family: 'Lato', sans-serif;
+ul {
+  padding-left: 0;
+  margin: 0;
 }
+
+li {
+  list-style: none;
+  padding: 10px 30px;
+  line-height: 1.5;
+  border-top: 2px solid #eee;
+
+  a {
+    text-decoration: none;
+    color: $dark-gray;
+  }
+
+  a:hover {
+    color: lighten($dark-gray, 20);
+  }
+
+  .row {
+    margin-bottom: 3px;
+  }
+
+  .row:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .resolved {
+    position: absolute; top: -10000px; left: -10000px;
+  }
+
+  .env {
+    @extend %badge;
+  }
+
+  .count {
+    @extend %badge;
+  }
+
+  .most_recent {
+    color: $medium-gray;
+  }
+
+  .msg {
+    font-size: 1.15em;
+  }
+
+  .action {
+    color: lighten($medium-gray, 10);
+    min-height: 1em;
+  }
+
+  &.env-production .env {
+    background: $badge-error-color;
+    color: darken($badge-error-color, 60);
+  }
+  &.env-acceptance .env {
+    background: $badge-notice-color;
+    color: darken($badge-notice-color, 60);
+  }
+  &.resolved { opacity: 0.5; }
+  &.not-resolved { }
+
+  &.count-one .count {
+    background: $badge-success-color;
+    color: darken($badge-success-color, 60);
+  }
+  &.count-two .count {
+    background: $badge-notice-color;
+    color: darken($badge-notice-color, 60);
+  }
+  &.count-five .count {
+    background: $badge-notice-color;
+    color: darken($badge-notice-color, 60);
+  }
+  &.count-sixteen .count {
+    background: $badge-notice-color;
+    color: darken($badge-notice-color, 60);
+  }
+  &.count-sixty-four .count {
+    background: $badge-error-color;
+    color: darken($badge-error-color, 60);
+  }
+  &.count-very-many .count {
+    background: $badge-error-color;
+    color: darken($badge-error-color, 60);
+  }
+
+  &.just-now {
+    -webkit-animation: blink 2s infinite ease-in-out alternate;
+    font-weight: 700;
+  }
+
+  &.just-now .most_recent { color: darken($badge-error-color, 60); }
+  &.more-than-5-mins .most_recent { color: darken($badge-error-color, 60); }
+  &.more-than-30-mins .most_recent { color: darken($badge-error-color, 60); }
+  &.more-than-3-hours .most_recent { color: darken($badge-error-color, 60); }
+  &.more-than-12-hours .most_recent { color: darken($badge-notice-color, 60); }
+  &.more-than-1-day .most_recent { color: darken($badge-notice-color, 60); }
+  &.more-than-2-days .most_recent { color: darken($badge-notice-color, 60); }
+  &.more-than-a-week .most_recent { color: darken($badge-success-color, 60); }
+}
+

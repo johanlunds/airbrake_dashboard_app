@@ -1,0 +1,45 @@
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+$medium-gray: #999;
+$dark-gray: #333;
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
+$base-font-size: 1em;
+
+$badge-background: $medium-gray;
+$badge-dark-color: $dark-gray;
+$badge-error-color: $error-color;
+$badge-notice-color: $notice-color;
+$badge-success-color: $success-color;
+$badge-font-color: #fff;
+$badge-font-size: $base-font-size;
+
+%badge {
+  display: inline-block;
+  background: $badge-background;
+  border-radius: 2em;
+  color: $badge-font-color;
+  font-size: $badge-font-size;
+  font-weight: 600;
+  line-height: 1;
+  padding: .25em 1em;
+  text-align: center;
+}
+
+@keyframes blink {
+  0%   { opacity: 0.5; }
+  25%  { opacity: 1; }
+  50%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@-webkit-keyframes blink {
+  0%   { opacity: 0.5; }
+  25%  { opacity: 1; }
+  50%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { opacity: 0.5; }
+}

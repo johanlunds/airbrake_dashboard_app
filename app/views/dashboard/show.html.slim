@@ -5,10 +5,13 @@ h1
 ul
   - for error in @errors
     li class=error.classes
-      a href=error.href
-        p.resolved = error.resolved
-        p.env = error.rails_env
-        p.count = error.notices_count
+      .row
+        .resolved = error.resolved
+        .env = error.rails_env
+        .count = error.notices_count
         time.most_recent(datetime=error.most_recent_notice_at) = error.most_recent_notice_at
-        p.msg = error.error_message
-        p.action = error.action
+      .row
+        a href=error.href
+          .msg = error.error_message
+      .row
+        .action = error.action
