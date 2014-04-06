@@ -2,6 +2,7 @@ doctype html
 html
   head
     title Airbrake Recent Errors
+    meta http-equiv="refresh" content=Rails.configuration.refresh_interval_in_seconds
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
