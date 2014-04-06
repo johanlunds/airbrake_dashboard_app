@@ -9,6 +9,6 @@ ul
         p.resolved = error.resolved
         p.env = error.rails_env
         p.count = error.notices_count
-        p.most_recent = error.time_since_most_recent
+        time.most_recent(datetime=error.most_recent_notice_at) = error.most_recent_notice_at
         p.msg = error.error_message
         p.action = error.action

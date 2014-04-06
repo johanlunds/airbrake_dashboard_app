@@ -9,8 +9,8 @@ class ErrorDecorator < Draper::Decorator
     "https://#{account}.airbrake.io/projects/#{object.project_id}/groups/#{object.id}"
   end
 
-  def time_since_most_recent
-    h.time_ago_in_words(object.most_recent_notice_at)
+  def most_recent_notice_at
+    object.most_recent_notice_at.iso8601
   end
 
   def action
