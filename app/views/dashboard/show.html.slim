@@ -1,2 +1,14 @@
-h1 Dashboard#show
-p Find me in app/views/dashboard/show.html.slim
+h1
+  ' Airbrake Recent Errors:
+  span.project = Rails.configuration.airbrake_project_name
+
+ul
+  - for error in @errors
+    li class=error.classes
+      a href=error.href
+        p.resolved = error.resolved
+        p.env = error.rails_env
+        p.count = error.notices_count
+        p.most_recent = error.time_since_most_recent
+        p.msg = error.error_message
+        p.action = error.action

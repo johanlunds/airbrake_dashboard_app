@@ -46,3 +46,5 @@ end
 
 gem 'slim-rails'
 gem 'airbrake-api'
+gem 'awesome_print'
+gem 'draper'
