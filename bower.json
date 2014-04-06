@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "jquery-timeago": "~1.4.0",
-    "normalize-css": "~3.0.1"
+    "normalize-css": "~3.0.1",
+    "Lettering.js": "~0.6.1"
   }
 }
