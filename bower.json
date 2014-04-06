@@ -1,0 +1,8 @@
+{
+  "name": "airbrake_dashboard_app",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "jquery-timeago": "~1.4.0"
+  }
+}
