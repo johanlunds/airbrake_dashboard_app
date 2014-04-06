@@ -5,9 +5,9 @@ body {
 }
 
 h1 {
-  padding: 30px;
+  padding: 20px;
   margin: 0;
-  font-size: 60px;
+  font-size: 50px;
   font-family: 'Shojumaru', cursive;
   // font-family: 'Eater', cursive;
   // font-family: 'Caesar Dressing', cursive;
@@ -42,11 +42,14 @@ h1 {
 ul {
   padding-left: 0;
   margin: 0;
+  -webkit-column-count: 2;
+  // Not supported yet:
+  //-webkit-column-fill: auto;
 }
 
 li {
   list-style: none;
-  padding: 10px 30px;
+  padding: 10px 20px;
   line-height: 1.5;
   border-top: 2px solid #eee;
 
