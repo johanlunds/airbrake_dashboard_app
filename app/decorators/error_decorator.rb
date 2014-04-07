@@ -9,6 +9,11 @@ class ErrorDecorator < Draper::Decorator
     "https://#{account}.airbrake.io/projects/#{object.project_id}/groups/#{object.id}"
   end
 
+  # try to fit into 3-4 lines max
+  def error_message
+    object.error_message.truncate(180, omission: "\u2026")
+  end
+
   def most_recent_notice_at
     object.most_recent_notice_at.iso8601
   end
